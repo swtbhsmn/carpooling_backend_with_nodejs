@@ -1,0 +1,93 @@
+
+.shadow-box{
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    width:70%;
+    height:100px;
+    margin-left:15%;
+   position: relative;
+   top:120px;
+   background: #fff;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+@media only screen and (max-width: 600px) {
+    .shadow-box{
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        width:90%;
+        min-height:220px;
+        margin-left:5%;
+       position: relative;
+       top:40px;
+       background: #fff;
+       display: flex;
+       justify-content: center;
+       align-items: center;
+      flex-direction: column;
+    }
+  }
+.co-box{
+    background: #093028;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #237A57, #093028);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #237A57, #1f6456); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    height: 300px;
+}
+.title-box{
+height: calc(100vh - 360px);
+display: flex;
+justify-content: center;
+align-items: center;
+flex-direction: column;
+
+}
+.forward{
+    padding:9px;
+    width:40px;
+    height:40px;
+    border-radius:50%;
+    color:#fff;
+    background:#1f6456;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    cursor: pointer;
+    margin-left: 20px;
+}
+@media only screen and (max-width: 600px) {
+    .forward{
+        padding:9px;
+        width:40px;
+        height:40px;
+        border-radius:50%;
+        color:#fff;
+        background:#1f6456;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        cursor: pointer;
+        margin-left: 0px;
+        margin-top: 5px;
+    }
+}
+
+.button-login{
+    background: #093028;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #237A57, #093028);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #237A57, #1f6456); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  
+}
+.spinnerx{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -moz-transform: translateX(-50%) translateY(-50%);
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-50%) translateY(-50%);
+    
+}
+.overly{
+    
+    height:100vh;
+    width:100%;
+    background-color:rgba(0, 0, 0, 0.286);
+    z-index:    10;
+    top:        0; 
+    left:       0; 
+    position:   fixed;
+}
