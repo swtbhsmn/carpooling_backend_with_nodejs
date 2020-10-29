@@ -1,24 +1,30 @@
 import React from 'react';
 import { Button, Form, FormGroup, Label, Input,} from 'reactstrap';
 
+
 class Login extends React.Component {
     constructor(props){
         super(props);
      this.state={
 
          username:"",
-         password:""
+         password:"",
+  
 
      }
+
      this.onSubmitHandler = this.onSubmitHandler.bind(this);
      this.onValueChange = this.onValueChange.bind(this);
-    }
-    onSubmitHandler=(e)=>{
-        e.preventDefault();
-        alert(JSON.stringify({username:this.state.username,password:this.state.password}));
-        this.props.loginUser(this.state.username,this.state.password);
-   
 
+    }
+  
+    onSubmitHandler=(e)=>{
+
+        e.preventDefault();
+        this.props.loginUser(this.state.username,this.state.password);
+        console.log(this.props);
+       
+   
     }
     onValueChange=(e)=>{
         this.setState({[e.target.name]: e.target.value});

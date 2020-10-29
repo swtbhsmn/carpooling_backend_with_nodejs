@@ -1,3 +1,5 @@
 export const DO_LOADING_LOGIN ='DO_LOADING_LOGIN';
 export const LOGIN_USER ='LOGIN_USER';
 export const LOGIN_USER_FAILED = 'LOGIN_USER_FAILED';
+
+export const REDIRECT = "REDIRECT";

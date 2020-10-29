@@ -29,7 +29,12 @@ export const loginUser = (user, pass) => (dispatch) => {
             throw error;
       })
       .then(response => response.json())
-      .then(response => dispatch(loginUserx(response)))
+      .then(response => {dispatch(loginUserx(response));
+ 
+        window.localStorage.setItem('user',JSON.stringify(response));
+   
+       
+    })
       .catch(error =>dispatch(loginFailed(error.message)));
 }
 
@@ -45,3 +50,8 @@ export const loginFailed = (errmess) => ({
 export const doLoading = () => ({
     type: ActionTypes.DO_LOADING_LOGIN
 });
+
+export const redirect=(re_direct)=>({
+    type:ActionTypes.REDIRECT,
+    payload:re_direct
+})

@@ -23,6 +23,7 @@ class Header extends React.Component {
                 password:""
             }
         }
+     
         this.toggleButton.bind(this.toggleButton);
         this.toggleLoginButton.bind(this.toggleLoginButton);
     }
@@ -33,6 +34,7 @@ class Header extends React.Component {
     toggleLoginButton = () => {
         this.setState({ isLoginOpen: !this.state.isLoginOpen });
     }
+
     render() {
         return (
             <div className="">
@@ -59,7 +61,7 @@ class Header extends React.Component {
                <div style={{width:"100%"}} onClick={this.toggleLoginButton}><i style={{cursor:"pointer",float:"right"}} className="material-icons">close</i></div>
                     <ModalBody>
                        
-                        <Login toggleLoginButton={this.toggleLoginButton} loginUser={this.props.loginUser}/>
+                        <Login toggleLoginButton={this.toggleLoginButton} loginUser={this.props.loginUser} />
                       
                        
                     </ModalBody>
