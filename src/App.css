@@ -28,12 +28,12 @@
   }
 .co-box{
     background: #093028;  /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, #237A57, #093028);  /* Chrome 10-25, Safari 5.1-6 */
+    background: -webkit-linear-gradient(to right, #237A57, #98a5a2);  /* Chrome 10-25, Safari 5.1-6 */
     background: linear-gradient(to right, #237A57, #1f6456); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
     height: 300px;
 }
 .title-box{
-height: calc(100vh - 360px);
+height: calc(100vh - 380px);
 display: flex;
 justify-content: center;
 align-items: center;

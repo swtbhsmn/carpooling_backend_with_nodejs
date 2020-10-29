@@ -4,16 +4,18 @@ import {Spinner } from "reactstrap";
 class  Loading  extends React.Component {
 
     render(){
-        return (
-           
-            <div className="overly">
+        if(this.props.isLoading){
+            return( <div className="overly">
 
             <div className="spinnerx">
             <Spinner  color="success" />
             </div>
     
-             </div>
-          );
+             </div>);
+        }else{
+            return(<div style={{display:"none"}}></div>)
+        }
+       
     }
   
   }

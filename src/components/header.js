@@ -61,7 +61,7 @@ class Header extends React.Component {
                <div style={{width:"100%"}} onClick={this.toggleLoginButton}><i style={{cursor:"pointer",float:"right"}} className="material-icons">close</i></div>
                     <ModalBody>
                        
-                        <Login toggleLoginButton={this.toggleLoginButton} loginUser={this.props.loginUser} />
+                        <Login toggleLoginButton={this.toggleLoginButton} props={this.props.redirect} />
                       
                        
                     </ModalBody>
