@@ -8,38 +8,35 @@ import {
     NavItem,
     NavLink,
     NavbarText,
-    Button,
-    Modal, ModalBody
+    Button
 } from 'reactstrap';
-import Login from "./login";
-import Signup from "./signup";
+
+
 class Header extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            isOpen: false,
-            isLoginOpen: false,
-            isSignup: false,
-            user: {
-                username: "",
-                password: ""
-            }
+
+            isOpen: false
         }
 
         this.toggleButton.bind(this.toggleButton);
-        this.toggleLoginButton.bind(this.toggleLoginButton);
+        this.LoginButton.bind(this.LoginButton);
         this.logoutButton.bind(this.logoutButton);
-        this.toggleSignupButton.bind(this.toggleSignupButton);
+        this.SignupButton.bind(this.SignupButton);
+
     }
 
     toggleButton = () => {
         this.setState({ isOpen: !this.state.isOpen });
     }
-    toggleLoginButton = () => {
-        this.setState({ isLoginOpen: !this.state.isLoginOpen });
+    LoginButton = () => {
+        this.props.redirect.history.push('/login');
+        this.setState({ isOpen: !this.state.isOpen });
     }
-    toggleSignupButton = () => {
-        this.setState({ isSignup: !this.state.isSignup });
+    SignupButton = () => {
+        this.props.redirect.history.push('/signup');
+        this.setState({ isOpen: !this.state.isOpen });
     }
     logoutButton = () => {
         window.localStorage.removeItem("user");
@@ -61,10 +58,10 @@ class Header extends React.Component {
 
 
                         </Nav>
-                        <NavbarText><Button style={{ cursor: "pointer", background: "#fff", color: "#000", marginRight: "5px" }} onClick={this.toggleSignupButton}>Signup</Button></NavbarText>
+                        <NavbarText><Button style={{ cursor: "pointer", background: "#fff", color: "#000", marginRight: "5px" }} onClick={this.SignupButton}>Signup</Button></NavbarText>
 
 
-                        <NavbarText><Button style={{ cursor: "pointer", background: "#fff", color: "#000" }} onClick={this.toggleLoginButton}>Login</Button></NavbarText>
+                        <NavbarText><Button style={{ cursor: "pointer", background: "#fff", color: "#000" }} onClick={this.LoginButton}>Login</Button></NavbarText>
                     </Collapse>
                 );
             }
@@ -96,30 +93,12 @@ class Header extends React.Component {
                 <Navbar className="navbar-fixed-top header-bar" light expand="md">
                     <NavbarBrand className="text-white" href="/">CarPooling</NavbarBrand>
                     <NavbarToggler onClick={this.toggleButton} />
+
                     <Toolnav />
                 </Navbar>
-                <Modal isOpen={this.state.isLoginOpen} toggle={this.toggleLoginButton} style={{ top: "25%" }} >
-                    <div style={{ width: "100%" }} onClick={this.toggleLoginButton}><i style={{ cursor: "pointer", float: "right" }} className="material-icons">close</i></div>
-                    <ModalBody>
-
-                        <Login toggleLoginButton={this.toggleLoginButton} props={this.props.redirect} />
 
 
-                    </ModalBody>
 
-
-                </Modal>
-
-                <Modal isOpen={this.state.isSignup} toggle={this.toggleSignupButton} style={{ top: "10%" }} >
-                    <div style={{ width: "100%" }} onClick={this.toggleSignupButton}><i style={{ cursor: "pointer", float: "right" }} className="material-icons">close</i></div>
-                    <ModalBody>
-
-                        <Signup />
-
-
-                    </ModalBody>
-
-                </Modal>
             </div>
         )
     }

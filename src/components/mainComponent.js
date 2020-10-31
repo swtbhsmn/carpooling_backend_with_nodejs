@@ -5,7 +5,8 @@ import { connect } from 'react-redux';
 import { Switch, Route, Redirect, withRouter } from 'react-router-dom';
 import { loginUser } from '../redux/actionCreator';
 import Header from "./header";
-
+import Signup from './signup';
+import Login from './login';
 const mapStateToProps = state => {
 
     return {
@@ -20,21 +21,21 @@ const mapDispatchToProps = dispatch => ({
     loginUser: (username, password) => dispatch(loginUser(username, password)),
 
 
-
 })
+
 class MainComponent extends React.Component {
 
     render() {
         return (
             <div>
                 <div className="header-box">
-                    <Header redirect={this.props}/>
+                    <Header redirect={this.props} />
                 </div>
                 <Switch>
 
                     <Route path='/home' component={(() => {
                         return (
-                            <Home/>
+                            <Home />
 
                         );
                     })} />
@@ -45,6 +46,23 @@ class MainComponent extends React.Component {
 
                         );
                     })} />
+
+                    <Route path='/signup' component={(() => {
+                        return (
+
+
+                            <Signup />
+                        );
+                    })} />
+
+                    <Route path='/login' component={(() => {
+                        return (
+
+
+                            <Login props={this.props} />
+                        );
+                    })} />
+
 
                     <Redirect to="/home" />
 

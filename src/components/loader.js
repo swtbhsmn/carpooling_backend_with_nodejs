@@ -8,7 +8,7 @@ class  Loading  extends React.Component {
             return( <div className="overly">
 
             <div className="spinnerx">
-            <Spinner  color="success" />
+            <Spinner  color="primary" />
             </div>
     
              </div>);
