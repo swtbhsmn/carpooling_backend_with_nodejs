@@ -27,7 +27,7 @@ class MainComponent extends React.Component {
     render() {
         return (
             <div>
-                <div >
+                <div className="header-box">
                     <Header redirect={this.props}/>
                 </div>
                 <Switch>

@@ -5,9 +5,8 @@ class Home extends React.Component {
     render() {
         return (
             <div >
-                
               
-                <div >
+                <div className="home-component" >
 
                     <div className="co-box" style={{ width: "100%" }}>
                         <div className="shadow-box" >

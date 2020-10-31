@@ -12,7 +12,7 @@ class Login extends React.Component {
 
 
         }
-        console.log(this.props);
+      
         this.onSubmitHandler = this.onSubmitHandler.bind(this);
         this.onValueChange = this.onValueChange.bind(this);
 
@@ -44,14 +44,15 @@ class Login extends React.Component {
                 <Form>
                     <FormGroup>
                         <Label for="exampleEmail">Email</Label>
-                        <Input type="email" name="username" value={this.state.username} onChange={this.onValueChange} id="exampleEmail" placeholder="Enter Email" />
+                        <Input autoComplete="off" spellCheck="false" type="email" name="username" value={this.state.username} onChange={this.onValueChange} id="exampleEmail" placeholder="Enter Email" />
                     </FormGroup>
                     <FormGroup>
                         <Label for="examplePassword">Password</Label>
-                        <Input type="password" name="password" value={this.state.password} onChange={this.onValueChange} id="examplePassword" placeholder="Enter Password" />
+                        <Input autoComplete="off" spellCheck="false"
+                     type="password" name="password" value={this.state.password} onChange={this.onValueChange} id="examplePassword" placeholder="Enter Password" />
                     </FormGroup>
                     <div style={{ width: "100%", justifyContent: "center", display: "flex" }}>
-                        <Button className="button-login" style={{ width: "60%" }} color="primary" onClick={this.onSubmitHandler}>Login</Button>{' '}
+                        <Button className="button-login" style={{ width: "60%" }} color="primary" onClick={this.onSubmitHandler} >Login</Button>{' '}
 
                     </div>
                 </Form>
