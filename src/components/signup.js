@@ -159,7 +159,7 @@ class Signup extends React.Component {
 
                             </div>
                         </Form>
-
+    <p style={{textAlign:"center"}}>    {this.props.props.signupUserDetails.registered.status}</p>
                     </div>
                 </div>
             </>

@@ -53,7 +53,7 @@ class Header extends React.Component {
                         <Nav className="mr-auto" navbar>
 
                             <NavItem>
-                                <NavLink className="text-white" href="/components/">About</NavLink>
+                                <NavLink className="text-white" href="/about">About</NavLink>
                             </NavItem>
 
 
@@ -75,7 +75,7 @@ class Header extends React.Component {
                             </NavItem>
                             <NavItem>
 
-                                <NavLink className="text-white" href="/components/">About</NavLink>
+                                <NavLink className="text-white" href="/about">About</NavLink>
                             </NavItem>
 
 
